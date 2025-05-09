@@ -1,0 +1,21 @@
+Date,Transaction_ID,Amount,Type,Customer,Payment_Method,ERP_Reference
+2025-03-15,TX10001,25000,Payment,Customer_12,Credit Card,ERP30001
+2025-03-16,TX10002,7500,Payment,Customer_5,NetBanking,ERP30002
+2025-03-19,TX10003,12100,Subscription,Customer_23,UPI,ERP30003
+2025-03-20,TX10004,35000,One-time,Customer_8,Credit Card,ERP30004
+2025-03-22,TX10006,18000,Payment,Customer_31,NetBanking,ERP30006
+2025-03-24,TX10007,6000,Renewal,Customer_4,UPI,ERP30007
+2025-03-25,TX10008,22000,Payment,Customer_29,Credit Card,ERP30008
+2025-03-26,TX10009,9500,Subscription,Customer_14,Wallet,ERP30009
+2025-03-28,TX10010,43500,One-time,Customer_38,Credit Card,ERP30010
+2025-03-31,TX10011,3000,Refund,Customer_27,Debit Card,ERP30011
+2025-04-01,TX10012,17500,Payment,Customer_9,NetBanking,ERP30012
+2025-04-02,TX10013,8000,Renewal,Customer_21,UPI,ERP30013
+2025-04-03,TX10014,29000,Payment,Customer_16,Credit Card,ERP30014
+2025-04-05,TX10015,14000,Subscription,Customer_33,Wallet,ERP30015
+2025-04-08,TX10017,31000,One-time,Customer_42,Credit Card,ERP30017
+2025-04-10,TX10018,7800,Payment,Customer_3,NetBanking,ERP30018
+2025-04-12,TX10019,19500,Subscription,Customer_26,UPI,ERP30019
+2025-04-14,TX10020,42000,Payment,Customer_19,Credit Card,ERP30020
+2025-04-15,TX10021,11500,Payment,Customer_7,UPI,ERP30021
+2025-04-17,TX10022,27000,One-time,Customer_45,Credit Card,ERP30022

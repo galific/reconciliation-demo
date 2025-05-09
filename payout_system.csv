@@ -1,0 +1,21 @@
+Date,Transaction_ID,Amount,Type,Customer,Payment_Method,Payout_Reference
+2025-03-15,TX10001,25000,Payment,Customer_12,Credit Card,PAY40001
+2025-03-16,TX10002,7500,Payment,Customer_5,NetBanking,PAY40002
+2025-03-18,TX10003,12000,Subscription,Customer_23,UPI,PAY40003
+2025-03-20,TX10004,35000,One-time,Customer_8,Credit Card,PAY40004
+2025-03-22,TX10006,18000,Payment,Customer_31,NetBanking,PAY40006
+2025-03-24,TX10007,6000,Renewal,Customer_4,UPI,PAY40007
+2025-03-25,TX10008,22000,Payment,Customer_29,Credit Card,PAY40008
+2025-03-27,TX10009,9500,Subscription,Customer_14,Wallet,PAY40009
+2025-03-28,TX10010,45000,One-time,Customer_38,Credit Card,PAY40010
+2025-04-01,TX10012,17500,Payment,Customer_9,NetBanking,PAY40012
+2025-04-02,TX10013,8000,Renewal,Customer_21,UPI,PAY40013
+2025-04-07,TX10016,5500,Refund,Customer_11,Debit Card,PAY40016
+2025-04-09,TX10017,31000,One-time,Customer_42,Credit Card,PAY40017
+2025-04-10,TX10018,7800,Payment,Customer_3,NetBanking,PAY40018
+2025-04-12,TX10019,19500,Subscription,Customer_26,UPI,PAY40019
+2025-04-14,TX10020,42000,Payment,Customer_19,Credit Card,PAY40020
+2025-04-15,TX10021,11500,Payment,Customer_7,UPI,PAY40021
+2025-04-16,TX10023,9000,Subscription,Customer_36,Wallet,PAY40023
+2025-04-18,TX10024,15500,One-time,Customer_2,Credit Card,PAY40024
+2025-04-20,TX10025,4800,Refund,Customer_41,Debit Card,PAY40025

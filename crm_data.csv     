@@ -1,0 +1,8 @@
+Date,Transaction_ID,Amount,Type,Customer,Payment_Method,CRM_Reference
+2025-03-21,TX10005,4500,Refund,Customer_17,Debit Card,CRM60001
+2025-03-30,TX10011,3000,Refund,Customer_27,Debit Card,CRM60002
+2025-04-06,TX10016,5500,Refund,Customer_11,Debit Card,CRM60003
+2025-04-20,TX10025,4800,Refund,Customer_41,Debit Card,CRM60004
+2025-04-22,TX10026,8700,Refund,Customer_15,Credit Card,CRM60005
+2025-04-24,TX10027,2300,Refund,Customer_32,UPI,CRM60006
+2025-04-25,TX10028,6500,Refund,Customer_18,Wallet,CRM60007

@@ -1,0 +1,21 @@
+Date,Transaction_ID,Amount,Type,Customer,Payment_Method,Bank_Reference
+2025-03-15,TX10001,25000,Payment,Customer_12,Credit Card,BNK20001
+2025-03-16,TX10002,7500,Payment,Customer_5,NetBanking,BNK20002
+2025-03-18,TX10003,12000,Subscription,Customer_23,UPI,BNK20003
+2025-03-20,TX10004,35000,One-time,Customer_8,Credit Card,BNK20004
+2025-03-21,TX10005,4500,Refund,Customer_17,Debit Card,BNK20005
+2025-03-22,TX10006,18000,Payment,Customer_31,NetBanking,BNK20006
+2025-03-24,TX10007,6000,Renewal,Customer_4,UPI,BNK20007
+2025-03-25,TX10008,22000,Payment,Customer_29,Credit Card,BNK20008
+2025-03-27,TX10009,9500,Subscription,Customer_14,Wallet,BNK20009
+2025-03-28,TX10010,45000,One-time,Customer_38,Credit Card,BNK20010
+2025-03-30,TX10011,3000,Refund,Customer_27,Debit Card,BNK20011
+2025-04-01,TX10012,17500,Payment,Customer_9,NetBanking,BNK20012
+2025-04-02,TX10013,8000,Renewal,Customer_21,UPI,BNK20013
+2025-04-03,TX10014,29000,Payment,Customer_16,Credit Card,BNK20014
+2025-04-05,TX10015,14000,Subscription,Customer_33,Wallet,BNK20015
+2025-04-07,TX10016,5500,Refund,Customer_11,Debit Card,BNK20016
+2025-04-09,TX10017,31000,One-time,Customer_42,Credit Card,BNK20017
+2025-04-10,TX10018,7800,Payment,Customer_3,NetBanking,BNK20018
+2025-04-12,TX10019,19500,Subscription,Customer_26,UPI,BNK20019
+2025-04-14,TX10020,42000,Payment,Customer_19,Credit Card,BNK20020
