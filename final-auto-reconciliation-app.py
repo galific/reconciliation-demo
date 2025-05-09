@@ -8,6 +8,9 @@ import random
 import io
 import base64
 
+# Configuration variables
+SHOW_DATA_SOURCES = False  # Set to True to show data sources panel
+
 # Set page configuration
 st.set_page_config(
     page_title="Galific Auto-Reconciliation Suite",
@@ -72,15 +75,15 @@ st.markdown("""
 # Sidebar for controls and file uploads
 with st.sidebar:
     st.image("https://galificsolutions.com/assets/logo.png", width=200)
-    st.markdown("## Data Sources")
     
-    # File uploaders
-    bank_file = st.file_uploader("Bank Statement (CSV)", type=["csv"])
-    erp_file = st.file_uploader("ERP Export (CSV)", type=["csv"])
-    payout_file = st.file_uploader("Payout System Export (CSV)", type=["csv"])
-    crm_file = st.file_uploader("CRM Data (CSV)", type=["csv"])
-    
-    st.markdown("---")
+    if SHOW_DATA_SOURCES:
+        st.markdown("## Data Sources")
+        # File uploaders
+        bank_file = st.file_uploader("Bank Statement (CSV)", type=["csv"])
+        erp_file = st.file_uploader("ERP Export (CSV)", type=["csv"])
+        payout_file = st.file_uploader("Payout System Export (CSV)", type=["csv"])
+        crm_file = st.file_uploader("CRM Data (CSV)", type=["csv"])
+        st.markdown("---")
     
     # Reconciliation settings
     st.markdown("## Reconciliation Settings")
@@ -536,7 +539,7 @@ def get_table_download_link(df, filename, text):
 if run_button:
     with st.spinner('Running reconciliation...'):
         # Process data based on uploaded files or generate sample data if no files uploaded
-        if bank_file and erp_file and payout_file and crm_file:
+        if SHOW_DATA_SOURCES and bank_file and erp_file and payout_file and crm_file:
             # Process uploaded files
             bank_df = pd.read_csv(bank_file)
             erp_df = pd.read_csv(erp_file)
@@ -549,7 +552,7 @@ if run_button:
                 error_rate=7,  # Default error rate
                 volume="Medium (100-300)"  # Default volume
             )
-            st.info("Using sample data for demonstration. Upload your own files to process real data.")
+            # st.info("Using sample data for demonstration. Upload your own files to process real data.")
         
         # Perform reconciliation
         results_df = reconcile_data(
