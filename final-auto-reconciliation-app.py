@@ -85,7 +85,7 @@ with st.sidebar:
         payout_file = st.file_uploader("Payout System Export (CSV)", type=["csv"])
         crm_file = st.file_uploader("CRM Data (CSV)", type=["csv"])
     
-    st.markdown("---")
+    st.markdown("---") 
     
     # Reconciliation settings
     st.markdown("## Reconciliation Settings")
