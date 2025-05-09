@@ -74,18 +74,13 @@ with st.sidebar:
     st.image("https://galificsolutions.com/assets/logo.png", width=200)
     st.markdown("## Data Sources")
     
-    data_source_option = st.radio(
-        "Choose Data Source:",
-        ["Use Sample Data", "Upload Your Own Files"]
-    )
+    # File uploaders
+    bank_file = st.file_uploader("Bank Statement (CSV)", type=["csv"])
+    erp_file = st.file_uploader("ERP Export (CSV)", type=["csv"])
+    payout_file = st.file_uploader("Payout System Export (CSV)", type=["csv"])
+    crm_file = st.file_uploader("CRM Data (CSV)", type=["csv"])
     
-    if data_source_option == "Upload Your Own Files":
-        bank_file = st.file_uploader("Bank Statement (CSV)", type=["csv"])
-        erp_file = st.file_uploader("ERP Export (CSV)", type=["csv"])
-        payout_file = st.file_uploader("Payout System Export (CSV)", type=["csv"])
-        crm_file = st.file_uploader("CRM Data (CSV)", type=["csv"])
-    
-    st.markdown("---") 
+    st.markdown("---")
     
     # Reconciliation settings
     st.markdown("## Reconciliation Settings")
@@ -110,31 +105,6 @@ with st.sidebar:
         value=0.0,
         step=0.1
     )
-    
-    st.markdown("---")
-    
-    # Demo settings
-    if data_source_option == "Use Sample Data":
-        st.markdown("## Sample Data Settings")
-        
-        sample_months = st.slider(
-            "Sample Period (months):",
-            min_value=1,
-            max_value=12,
-            value=6
-        )
-        
-        error_rate = st.slider(
-            "Simulated Error Rate (%):",
-            min_value=1,
-            max_value=15,
-            value=7
-        )
-        
-        transaction_volume = st.select_slider(
-            "Monthly Transaction Volume:",
-            options=["Low (50-100)", "Medium (100-300)", "High (300-500)"]
-        )
     
     run_button = st.button("Run Reconciliation", type="primary")
 
@@ -565,24 +535,21 @@ def get_table_download_link(df, filename, text):
 # Main app logic
 if run_button:
     with st.spinner('Running reconciliation...'):
-        # Process data based on selected source
-        if data_source_option == "Use Sample Data":
-            # Generate sample data
-            bank_df, erp_df, payout_df, crm_df = generate_sample_data(
-                months=sample_months,
-                error_rate=error_rate,
-                volume=transaction_volume
-            )
-        else:
+        # Process data based on uploaded files or generate sample data if no files uploaded
+        if bank_file and erp_file and payout_file and crm_file:
             # Process uploaded files
-            if bank_file and erp_file and payout_file and crm_file:
-                bank_df = pd.read_csv(bank_file)
-                erp_df = pd.read_csv(erp_file)
-                payout_df = pd.read_csv(payout_file)
-                crm_df = pd.read_csv(crm_file)
-            else:
-                st.error("Please upload all required files or select 'Use Sample Data'")
-                st.stop()
+            bank_df = pd.read_csv(bank_file)
+            erp_df = pd.read_csv(erp_file)
+            payout_df = pd.read_csv(payout_file)
+            crm_df = pd.read_csv(crm_file)
+        else:
+            # Generate sample data with default parameters
+            bank_df, erp_df, payout_df, crm_df = generate_sample_data(
+                months=6,  # Default to 6 months
+                error_rate=7,  # Default error rate
+                volume="Medium (100-300)"  # Default volume
+            )
+            st.info("Using sample data for demonstration. Upload your own files to process real data.")
         
         # Perform reconciliation
         results_df = reconcile_data(
