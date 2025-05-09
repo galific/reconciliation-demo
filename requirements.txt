@@ -68,4 +68,4 @@ webencodings==0.5.1
 Werkzeug==2.2.3
 WooCommerce==3.0.0
 zopfli==0.2.3.post1
-setuptools
+setuptools=76.0.0
